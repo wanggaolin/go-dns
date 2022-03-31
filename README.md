@@ -17,6 +17,8 @@
 
 ### 使用(启动服务)
 ```shell
+git clone https://github.com/wanggaolin/go-dns.git
+cd go-dns/bin
 ./go-dns -f config.yaml
 ```
 
