@@ -11,12 +11,14 @@
 | HOST               | 0.0.0.0            |   监听地址                |
 | PORT               | 53                 |   监听端口                |
 | LOG_FILE           | go-dns.log         |   日志                   |
-| RECORD_FILE        | record.txt         |   接触的域名解析记录        |
+| RECORD_FILE        | record.txt         |   劫持域名解析记录文本      |
 | FORWARDERS/TIMEOUT | 5                  |   转发上层dns超时时间(秒)   |
 | FORWARDERS/DNS     | 223.5.5.5          |   转发上层dns             |
 
-### 使用
+### 使用(启动服务)
+```shell
 ./go-dns -f config.yaml
+```
 
 ### 测试
 ```shell
