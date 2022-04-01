@@ -1,10 +1,13 @@
 HOST: 0.0.0.0
 PORT: 53
 DEBUG: true
+MIN_CACHE: 10
+LOG_LEVEL: info
 LOG_FILE: /tmp/go-dns.log
 RECORD_FILE: record.txt
+MAX_PROCEED: 1000
 FORWARDERS:
-  TIMEOUT: 5
+  TIMEOUT: 3
   DNS:
     - 223.5.5.5
     - 223.6.6.6

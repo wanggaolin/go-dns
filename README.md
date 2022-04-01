@@ -2,17 +2,22 @@
 ###轻量级GO DNS服务
 
 ### 特点
-* 支持域名劫持(自定义域名)
-* 支持域名转发
+* 支持域名劫持(自定义域名&支持自动热加载)
+* 支持域名缓存
+* 支持并发限制
+* 支持域名转发(上层dns越多越好，随机打散请求)
 
 ### 配置文件
 | Key                | Value              |Describe                 |
 |  ----------        | :-----------:      |   :-----------:         |                    
 | HOST               | 0.0.0.0            |   监听地址                |
 | PORT               | 53                 |   监听端口                |
+| MIN_CACHE          | 10                 |   最小缓存ttl，如果ttl小于(MIN_CACHE),按照MIN_CACHE缓存 |
+| LOG_LEVEL          | info               |   日志登记/debug/info/...../error |
 | LOG_FILE           | go-dns.log         |   日志                   |
+| MAX_PROCEED        | 20000              |   dns请求并发限制          |
 | RECORD_FILE        | record.txt         |   劫持域名解析记录文本      |
-| FORWARDERS/TIMEOUT | 5                  |   转发上层dns超时时间(秒)   |
+| FORWARDERS/TIMEOUT | 3                  |   转发上层dns超时时间(秒)   |
 | FORWARDERS/DNS     | 223.5.5.5          |   转发上层dns             |
 
 ### 使用(启动服务)
