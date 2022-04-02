@@ -12,7 +12,7 @@
 |  ----------        | :-----------:      |   :-----------:         |                    
 | HOST               | 0.0.0.0            |   监听地址                |
 | PORT               | 53                 |   监听端口                |
-| MIN_CACHE          | 10                 |   最小缓存ttl，如果ttl小于(MIN_CACHE),按照MIN_CACHE缓存 |
+| MIN_CACHE          | 30                 |   最小缓存ttl，如果ttl小于(MIN_CACHE),按照MIN_CACHE缓存 |
 | LOG_LEVEL          | info               |   日志等级/info/debug/...../error |
 | LOG_FILE           | go-dns.log         |   日志文件                |
 | MAX_PROCEED        | 20000              |   dns请求并发限制          |
